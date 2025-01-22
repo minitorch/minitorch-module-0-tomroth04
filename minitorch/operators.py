@@ -33,6 +33,32 @@ from typing import Callable, Iterable
 
 
 # TODO: Implement for Task 0.1.
+def mul(x: float, y: float) -> float:
+    return x * y
+
+def id(x):
+    return x
+
+def add(x: float, y: float) -> float:
+    return x + y
+
+def neg(n: float) -> float:
+    return -n
+
+def lt(x: float, y: float): # TODO: could add return
+    return x < y
+
+def eq(x: float, y: float): # TODO: could add return
+    return x == y
+
+def max(x: float, y: float) -> float:
+    if x > y:
+        return x
+    return y
+
+def is_close(x: float, y: float): # TODO: could add return
+    return abs(x - y) 
+
 
 
 # ## Task 0.3
