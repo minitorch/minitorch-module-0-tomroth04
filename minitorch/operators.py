@@ -59,7 +59,31 @@ def max(x: float, y: float) -> float:
 def is_close(x: float, y: float): # TODO: could add return
     return abs(x - y) 
 
+def sigmoid(x: float):
+    return 1 / (1 + (math.e ** (-x)))
 
+def relu(x: float) -> float:
+    return max(0, x)
+
+def log(x: float) -> float:
+    return math.log(x)
+
+def exp(x: float) -> float:
+    return math.e ** x
+
+def inv(x: float) -> float:
+    return 1 / x
+
+def log_back(x: float, alpha: float) -> float:
+    return (1 / x) * alpha
+
+def inv_back(x: float, alpha: float) -> float:
+    return -alpha * (1 / (x**2))
+
+def relu_back(x: float, alpha: float) -> float:
+    if x > 0:
+        return alpha
+    return 0
 
 # ## Task 0.3
 
