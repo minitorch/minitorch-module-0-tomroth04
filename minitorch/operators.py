@@ -57,10 +57,12 @@ def max(x: float, y: float) -> float:
     return y
 
 def is_close(x: float, y: float): # TODO: could add return
-    return abs(x - y) 
+    return abs(x - y) < (1 / (math.e **2))
 
 def sigmoid(x: float):
-    return 1 / (1 + (math.e ** (-x)))
+    if x >= 0:
+        return 1 / (1 + (math.e ** (-x)))
+    return (math.e **x) / (1.0 + (math.e ** x))
 
 def relu(x: float) -> float:
     return max(0, x)
@@ -102,3 +104,7 @@ def relu_back(x: float, alpha: float) -> float:
 
 
 # TODO: Implement for Task 0.3.
+def map(l, f):
+    return [f(l(i)) for i in l]
+
+def zipWith()
